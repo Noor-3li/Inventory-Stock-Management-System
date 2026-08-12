@@ -54,101 +54,98 @@ The Inventory & Stock Management System provides a centralized platform for mana
 - JSON Web Token (JWT)
 - Cookies
 - bcryptjs
-- Role-Based Access Control (RBAC)
-
 ## 🏗️ System Architecture
 
-```text
-Frontend (React.js)
-        │
-        ▼
-   REST API
-        │
-        ▼
-Backend (Node.js + Express.js)
+**React Frontend**  
+↓  
+**Axios**  
+↓  
+**Node.js + Express**  
+↓  
+**Authentication & Authorization**  
+↓  
+**Mongoose**  
+↓  
+**MongoDB Atlas**
 
- 📂 Project Structure
+## 🔄 Application Flow
+
+**User**  
+↓  
+**Login**  
+↓  
+**Authentication**  
+↓  
+**Role Identification**  
+↓  
+**Manager / Employee / User**
+
+- **Manager:** Full Access
+- **Employee:** Product CRUD
+- **User:** View Only
+
 ## 📂 Project Structure
 
-```text
-Inventory-Stock-Management-System/
-│
-├── backend/
-│   ├── controllers/
-│   ├── models/
-│   ├── routes/
-│   ├── middleware/
-│   ├── config/
-│   ├── server.js
-│   └── package.json
-│
-├── frontend/
-│   ├── src/
-│   ├── public/
-│   ├── package.json
-│   └── vite.config.js
-│
-└── README.md
+**Inventory-Stock-Management/**
 
+- `frontend/`
+  - `src/`
+  - `public/`
+  - `package.json`
+- `backend/`
+  - `models/`
+  - `routes/`
+  - `controllers/`
+  - `middleware/`
+  - `server.js`
+  - `package.json`
+- `README.md`
+- `.gitignore`
 
-### ** 🚀 Installation & Setup**
-```markdown
-## 🚀 Installation & Setup
- Clone Repository
-### **1. Clone the Repository**
+## ⚙️ Installation & Setup
 
-```bash
-git clone https://github.com/Noor-3li/Inventory-Stock-Management-System.git
-cd Inventory-Stock-Management-System
+### 1. Clone the Repository
 
-### ** Backend Dependencies**
-```markdown
-### **2. Install Backend Dependencies**
+`git clone https://github.com/Noor-3li/Inventory-Stock-Management-System.git`
 
-```bash
-cd backend
-npm install
+`cd Inventory-Stock-Management-System`
 
-### ** Environment Variables**
-```markdown
-### **3. Configure Environment Variables**
+### 2. Install Backend Dependencies
 
-Create a `.env` file inside the backend directory:
+`cd backend`
 
-```env
-PORT=5000
-MONGODB_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
+`npm install`
 
-### ** Start Backend**
-```markdown
-### **4. Start the Backend**
+### 3. Configure Environment Variables
 
-```bash
-npm start
+Create a `.env` file inside the `backend` directory:
 
-### ** Frontend Dependencies**
-```markdown
-### **5. Install Frontend Dependencies**
+`PORT=5000`
+
+`MONGODB_URI=your_mongodb_connection_string`
+
+`JWT_SECRET=your_jwt_secret`
+
+> **Note:** Do not upload the `.env` file to GitHub.
+
+### 4. Start the Backend
+
+`npm start`
+
+### 5. Install Frontend Dependencies
 
 Open a new terminal:
 
-```bash
-cd frontend
-npm install
+`cd frontend`
 
-### ** Start Frontend**
-```markdown
-### **6. Start the Frontend**
+`npm install`
 
-```bash
-npm run dev
+### 6. Start the Frontend
+
+`npm run dev`
 
 The application will be available at the local URL provided by Vite.
 
-
-### ** 🔐 Security**
-```markdown
 ## 🔐 Security
 
 - Passwords are hashed before storage.
@@ -158,4 +155,5 @@ The application will be available at the local URL provided by Vite.
 - Role-based authorization controls user permissions.
 - Sensitive credentials are stored using environment variables.
 
+- Role-Based Access Control (RBAC)
 

@@ -1,12 +1,13 @@
-**Inventory & Stock Management System**
 
-A full-stack web application for managing products, categories, and suppliers using the MERN stack with authentication and role-based access control.
+# Inventory & Stock Management System
 
-**Overview**
+A full-stack web application for managing products, categories, and suppliers using the **MERN stack**, with authentication and role-based access control.
 
-The Inventory & Stock Management System provides a centralized platform for managing inventory operations. It uses role-based access control (RBAC) to ensure that each user can access only the features and operations assigned to their role.
+## 📌 Overview
 
-**Key Features**
+The Inventory & Stock Management System provides a centralized platform for managing inventory operations. It uses **Role-Based Access Control (RBAC)** to ensure that each user can access only the features and operations assigned to their role.
+
+## ✨ Key Features
 
 - User authentication and authorization
 - Role-based access control
@@ -19,16 +20,17 @@ The Inventory & Stock Management System provides a centralized platform for mana
 - RESTful API integration
 - MongoDB database integration
 
-**User Roles & Permissions**
+## 👥 User Roles & Permissions
 
-**Role| Products| Categories| Suppliers**
-Manager| Add, View, Update, Delete| Add, View, Update, Delete| Add, View, Update, Delete
-Employee| Add, View, Update, Delete| No Access| No Access
-User| View Only| No Access| No Access
+| Role | Products | Categories | Suppliers |
+|------|----------|------------|-----------|
+| **Manager** | Add, View, Update, Delete | Add, View, Update, Delete | Add, View, Update, Delete |
+| **Employee** | Add, View, Update, Delete | No Access | No Access |
+| **User** | View Only | No Access | No Access |
 
-**Tech Stack**
+## 🛠️ Tech Stack
 
-**Frontend**
+### Frontend
 
 - React.js
 - JavaScript
@@ -36,124 +38,52 @@ User| View Only| No Access| No Access
 - HTML
 - CSS
 
-**Backend**
+### Backend
 
 - Node.js
 - Express.js
 - REST APIs
 
-**Database**
+### Database
 
 - MongoDB
 - MongoDB Atlas
 - Mongoose
 
-**Authentication & Security
-**
+### Authentication & Security
+
 - JSON Web Token (JWT)
 - Cookies
 - bcryptjs
 - Role-Based Access Control (RBAC)
 
-**System Architecture**
+## 🏗️ System Architecture
 
-React Frontend
-      |
-    Axios
-      |
-      v
-Node.js + Express
-      |
-Authentication & Authorization
-      |
-      v
-   Mongoose
-      |
-      v
-MongoDB Atlas
-
-**Application Flow**
-
-User
-  |
-  v
-Login
-  |
-  v
-Authentication
-  |
-  v
-Role Identification
-  |
-  +----------------+----------------+
-  |                |                |
-  v                v                v
-Manager         Employee          User
-  |                |                |
-  v                v                v
-Full Access    Product CRUD     View Only
-
-**Project Structure**
-
-Inventory-Stock-Management/
-│
-├── frontend/
-│   ├── src/
-│   ├── public/
-│   └── package.json
-│
-├── backend/
-│   ├── models/
-│   ├── routes/
-│   ├── controllers/
-│   ├── middleware/
-│   ├── server.js
-│   └── package.json
-│
-├── README.md
-└── .gitignore
-
-**Installation & Setup**
-
-**1. Clone the Repository**
-
+```text
 git clone https://github.com/Noor-3li/Inventory-Stock-Management-System.git
-
-**2. Install Backend Dependencies
-**
+cd Inventory-Stock-Management-System
+2. Install Backend Dependencies
 cd backend
 npm install
-
-**3. Configure Environment Variables**
-
-Create a ".env" file inside the "backend" directory:
-
+3. Configure Environment Variables
+Create a .env file inside the backend directory:
 PORT=5000
 MONGODB_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
-
-**4. Start the Backend**
-
+Note: Do not upload the .env file to GitHub.
+4. Start the Backend
 npm start
-
-**5. Install Frontend Dependencies
-**
+5. Install Frontend Dependencies
 Open a new terminal:
-
 cd frontend
 npm install
-
-**6. Start the Frontend**
-
+6. Start the Frontend
 npm run dev
-
 The application will be available at the local URL provided by Vite.
-
-**Security**
-
-- Passwords are hashed before storage.
-- JWT is used for authentication.
-- Cookies are used for authentication handling.
-- Protected routes restrict unauthorized access.
-- Role-based authorization controls user permissions.
-- Sensitive credentials are stored using environment variables.
+🔐 Security
+Passwords are hashed before storage.
+JWT is used for authentication.
+Cookies are used for authentication handling.
+Protected routes restrict unauthorized access.
+Role-based authorization controls user permissions.
+Sensitive credentials are stored using environment variables.

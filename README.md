@@ -67,7 +67,31 @@ Frontend (React.js)
         ▼
 Backend (Node.js + Express.js)
 
-##🚀 Installation & Setup
+## 📂 Project Structure
+
+Inventory-Stock-Management-System/
+├── backend/
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── middleware/
+│   ├── config/
+│   ├── server.js
+│   └── package.json
+│
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   ├── package.json
+│   └── vite.config.js
+│
+└── README.md
+        │
+        ▼
+MongoDB Database
+
+
+## 🚀 Installation & Setup
 
 **1. Clone the Repository**
 git clone https://github.com/Noor-3li/Inventory-Stock-Management-System.git
@@ -98,7 +122,7 @@ npm run dev
 
 The application will be available at the local URL provided by Vite.
 
-##🔐 Security
+## 🔐 Security
 Passwords are hashed before storage.
 JWT is used for authentication.
 Cookies are used for authentication handling.
@@ -106,24 +130,3 @@ Protected routes restrict unauthorized access.
 Role-based authorization controls user permissions.
 Sensitive credentials are stored using environment variables.
 
-##📂 Project Structure
-Inventory-Stock-Management-System/
-├── backend/
-│   ├── controllers/
-│   ├── models/
-│   ├── routes/
-│   ├── middleware/
-│   ├── config/
-│   ├── server.js
-│   └── package.json
-│
-├── frontend/
-│   ├── src/
-│   ├── public/
-│   ├── package.json
-│   └── vite.config.js
-│
-└── README.md
-        │
-        ▼
-MongoDB Database

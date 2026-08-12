@@ -67,9 +67,12 @@ Frontend (React.js)
         ▼
 Backend (Node.js + Express.js)
 
+ 📂 Project Structure
 ## 📂 Project Structure
 
+```text
 Inventory-Stock-Management-System/
+│
 ├── backend/
 │   ├── controllers/
 │   ├── models/
@@ -86,47 +89,73 @@ Inventory-Stock-Management-System/
 │   └── vite.config.js
 │
 └── README.md
-        │
-        ▼
-MongoDB Database
 
 
+### ** 🚀 Installation & Setup**
+```markdown
 ## 🚀 Installation & Setup
+ Clone Repository
+### **1. Clone the Repository**
 
-**1. Clone the Repository**
+```bash
 git clone https://github.com/Noor-3li/Inventory-Stock-Management-System.git
 cd Inventory-Stock-Management-System
 
-**2. Install Backend Dependencies**
+### ** Backend Dependencies**
+```markdown
+### **2. Install Backend Dependencies**
+
+```bash
 cd backend
 npm install
 
-**3. Configure Environment Variables**
+### ** Environment Variables**
+```markdown
+### **3. Configure Environment Variables**
 
-Create a .env file inside the backend directory:
+Create a `.env` file inside the backend directory:
 
+```env
 PORT=5000
 MONGODB_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 
-**4. Start the Backend**
+### ** Start Backend**
+```markdown
+### **4. Start the Backend**
+
+```bash
 npm start
 
-**5. Install Frontend Dependencies**
+### ** Frontend Dependencies**
+```markdown
+### **5. Install Frontend Dependencies**
+
 Open a new terminal:
+
+```bash
 cd frontend
 npm install
 
-**6. Start the Frontend**
+### ** Start Frontend**
+```markdown
+### **6. Start the Frontend**
+
+```bash
 npm run dev
 
 The application will be available at the local URL provided by Vite.
 
+
+### ** 🔐 Security**
+```markdown
 ## 🔐 Security
-Passwords are hashed before storage.
-JWT is used for authentication.
-Cookies are used for authentication handling.
-Protected routes restrict unauthorized access.
-Role-based authorization controls user permissions.
-Sensitive credentials are stored using environment variables.
+
+- Passwords are hashed before storage.
+- JWT is used for authentication.
+- Cookies are used for authentication handling.
+- Protected routes restrict unauthorized access.
+- Role-based authorization controls user permissions.
+- Sensitive credentials are stored using environment variables.
+
 

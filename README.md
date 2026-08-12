@@ -126,7 +126,6 @@ Create a `.env` file inside the `backend` directory:
 
 `JWT_SECRET=your_jwt_secret`
 
-> **Note:** Do not upload the `.env` file to GitHub.
 
 ### 4. Start the Backend
 

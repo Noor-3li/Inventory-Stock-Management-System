@@ -21,11 +21,11 @@ The Inventory & Stock Management System provides a centralized platform for mana
 
 ## 👥 User Roles & Permissions
 
-| Role | Products | Categories | Suppliers |
-|---|---|---|---|
-| **Manager** | Add, View, Update, Delete | Add, View, Update, Delete | Add, View, Update, Delete |
-| **Employee** | Add, View, Update, Delete | No Access | No Access |
-| **User** | View Only | No Access | No Access |
+| Role | Products | Suppliers | Categories | Users |
+|------|----------|-----------|------------|-------|
+| **Admin** | Add, View, Update, Delete | Add, View, Update, Delete | Add, View, Update, Delete | Add, View, Update, Delete |
+| **Manager** | Add, View, Update, Delete | View Only | View Only | No Access |
+| **Employee** | View Only | View Only | View Only | No Access |
 
 ## 🛠️ Tech Stack
 
@@ -54,6 +54,8 @@ The Inventory & Stock Management System provides a centralized platform for mana
 - JSON Web Token (JWT)
 - Cookies
 - bcryptjs
+- Role-Based Access Control (RBAC)
+
 ## 🏗️ System Architecture
 
 **React Frontend**  
@@ -62,7 +64,7 @@ The Inventory & Stock Management System provides a centralized platform for mana
 ↓  
 **Node.js + Express**  
 ↓  
-**Authentication & Authorization**  
+**Authentication & Role-Based Authorization**  
 ↓  
 **Mongoose**  
 ↓  
@@ -78,11 +80,11 @@ The Inventory & Stock Management System provides a centralized platform for mana
 ↓  
 **Role Identification**  
 ↓  
-**Manager / Employee / User**
+**Access Based on Role**
 
-- **Manager:** Full Access
-- **Employee:** Product CRUD
-- **User:** View Only
+- **Admin:** Full CRUD access to products, suppliers, categories, and users.
+- **Manager:** CRUD access to products.
+- **Employee:** View-only access.
 
 ## 📂 Project Structure
 
@@ -126,7 +128,6 @@ Create a `.env` file inside the `backend` directory:
 
 `JWT_SECRET=your_jwt_secret`
 
-
 ### 4. Start the Backend
 
 `npm start`
@@ -153,6 +154,3 @@ The application will be available at the local URL provided by Vite.
 - Protected routes restrict unauthorized access.
 - Role-based authorization controls user permissions.
 - Sensitive credentials are stored using environment variables.
-
-- Role-Based Access Control (RBAC)
-
